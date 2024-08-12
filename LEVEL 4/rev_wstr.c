@@ -46,13 +46,13 @@ int main(int argc, char **argv)
 		//Finding Words and Reversing Order:
 		while (i >= 0)
 		{
-			//Skipping White Spaces and Tabs:
+			//Skipping White Spaces and Tabs: // white
 			while (argv[1][i] == ' ' || argv[1][i] == '\0' || argv[1][i] == '\t')
 				i--;
 			//Finding the End of a Word:
 			end = i;
-			//Finding the Start of the Word:
-			while (argv[1][i] != ' ' && argv[1][i] != '\0' && argv[1][i] != '\t')
+			//Finding the Start of the Word:  // char
+			while ( i >= 0 && argv[1][i] != ' ' && argv[1][i] != '\0' && argv[1][i] != '\t' )
 				i--;
 			start = i + 1;
 			flag = start;
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
 				start++;
 			}
 			//Printing Space Between Words:
-			if (flag != 0)
+			if (flag != 0)  // 
 			{
 				write(1, " ", 1);
 			}
